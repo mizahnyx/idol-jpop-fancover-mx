@@ -18,9 +18,16 @@ defmodule IdolJpopFancoverMx.Router do
 
     get "/", PageController, :index
   end
-
+  
   # Other scopes may use custom stacks.
   # scope "/api", IdolJpopFancoverMx do
   #   pipe_through :api
   # end
+  
+  scope "/auth", IdolJpopFancoverMx do
+    pipe_through :browser
+    
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
 end
