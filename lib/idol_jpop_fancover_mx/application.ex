@@ -1,4 +1,4 @@
-defmodule IdolJpopFancoverMx do
+defmodule IdolJpopFancoverMx.Application do
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html

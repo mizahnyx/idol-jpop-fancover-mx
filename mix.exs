@@ -17,7 +17,7 @@ defmodule IdolJpopFancoverMx.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {IdolJpopFancoverMx, []},
+    [mod: {IdolJpopFancoverMx.Application, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex, :ueberauth, :ueberauth_facebook]]
   end
@@ -32,7 +32,7 @@ defmodule IdolJpopFancoverMx.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.3.0"},
      {:phoenix_pubsub, "~> 1.0"},
-     {:phoenix_ecto, "~> 3.0"},
+     {:phoenix_ecto, "~> 3.2"},
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
