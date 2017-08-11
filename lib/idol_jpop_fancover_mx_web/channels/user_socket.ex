@@ -1,4 +1,4 @@
-defmodule IdolJpopFancoverMx.UserSocket do
+defmodule IdolJpopFancoverMxWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels

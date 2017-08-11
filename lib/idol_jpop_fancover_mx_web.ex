@@ -1,12 +1,12 @@
-defmodule IdolJpopFancoverMx.Web do
+defmodule IdolJpopFancoverMxWeb do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use IdolJpopFancoverMx.Web, :controller
-      use IdolJpopFancoverMx.Web, :view
+      use IdolJpopFancoverMxWeb, :controller
+      use IdolJpopFancoverMxWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -28,20 +28,21 @@ defmodule IdolJpopFancoverMx.Web do
 
   def controller do
     quote do
-      use Phoenix.Controller
+      use Phoenix.Controller, namespace: IdolJpopFancoverMxWeb
 
       alias IdolJpopFancoverMx.Repo
       import Ecto
       import Ecto.Query
 
-      import IdolJpopFancoverMx.Router.Helpers
-      import IdolJpopFancoverMx.Gettext
+      import IdolJpopFancoverMxWeb.Router.Helpers
+      import IdolJpopFancoverMxWeb.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "web/templates"
+      use Phoenix.View, root: "lib/idol_jpop_fancover_mx_web/templates",
+        namespace: IdolJpopFancoverMxWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
@@ -49,9 +50,9 @@ defmodule IdolJpopFancoverMx.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import IdolJpopFancoverMx.Router.Helpers
-      import IdolJpopFancoverMx.ErrorHelpers
-      import IdolJpopFancoverMx.Gettext
+      import IdolJpopFancoverMxWeb.Router.Helpers
+      import IdolJpopFancoverMxWeb.ErrorHelpers
+      import IdolJpopFancoverMxWeb.Gettext
     end
   end
 
@@ -68,7 +69,7 @@ defmodule IdolJpopFancoverMx.Web do
       alias IdolJpopFancoverMx.Repo
       import Ecto
       import Ecto.Query
-      import IdolJpopFancoverMx.Gettext
+      import IdolJpopFancoverMxWeb.Gettext
     end
   end
 

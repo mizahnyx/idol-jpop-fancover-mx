@@ -10,10 +10,10 @@ config :idol_jpop_fancover_mx,
   ecto_repos: [IdolJpopFancoverMx.Repo]
 
 # Configures the endpoint
-config :idol_jpop_fancover_mx, IdolJpopFancoverMx.Endpoint,
+config :idol_jpop_fancover_mx, IdolJpopFancoverMxWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "KyepzBumhxSsvCL7wEhtv2YNdUWVq68mjgsGEleBUGVvvAf9budTI41sLsK+S+bO",
-  render_errors: [view: IdolJpopFancoverMx.ErrorView, accepts: ~w(html json)],
+  render_errors: [view: IdolJpopFancoverMxWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: IdolJpopFancoverMx.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

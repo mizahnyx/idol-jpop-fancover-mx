@@ -1,7 +1,7 @@
-defmodule IdolJpopFancoverMx.Endpoint do
+defmodule IdolJpopFancoverMxWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :idol_jpop_fancover_mx
 
-  socket "/socket", IdolJpopFancoverMx.UserSocket
+  socket "/socket", IdolJpopFancoverMxWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -38,5 +38,5 @@ defmodule IdolJpopFancoverMx.Endpoint do
     key: "_idol_jpop_fancover_mx_key",
     signing_salt: "YTy2BrRZ"
 
-  plug IdolJpopFancoverMx.Router
+  plug IdolJpopFancoverMxWeb.Router
 end

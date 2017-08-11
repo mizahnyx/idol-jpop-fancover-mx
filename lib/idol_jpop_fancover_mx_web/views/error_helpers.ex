@@ -1,4 +1,4 @@
-defmodule IdolJpopFancoverMx.ErrorHelpers do
+defmodule IdolJpopFancoverMxWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """

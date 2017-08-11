@@ -1,5 +1,5 @@
-defmodule IdolJpopFancoverMx.AuthController do
-  use IdolJpopFancoverMx.Web, :controller
+defmodule IdolJpopFancoverMxWeb.AuthController do
+  use IdolJpopFancoverMxWeb, :controller
   plug Ueberauth
 
   alias Ueberauth.Strategy.Helpers

@@ -1,4 +1,4 @@
-defmodule IdolJpopFancoverMx.ConnCase do
+defmodule IdolJpopFancoverMxWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -25,10 +25,10 @@ defmodule IdolJpopFancoverMx.ConnCase do
       import Ecto.Changeset
       import Ecto.Query
 
-      import IdolJpopFancoverMx.Router.Helpers
+      import IdolJpopFancoverMxWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint IdolJpopFancoverMx.Endpoint
+      @endpoint IdolJpopFancoverMxWeb.Endpoint
     end
   end
 

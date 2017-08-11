@@ -1,5 +1,5 @@
-defmodule IdolJpopFancoverMx.Router do
-  use IdolJpopFancoverMx.Web, :router
+defmodule IdolJpopFancoverMxWeb.Router do
+  use IdolJpopFancoverMxWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,7 +13,7 @@ defmodule IdolJpopFancoverMx.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", IdolJpopFancoverMx do
+  scope "/", IdolJpopFancoverMxWeb do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
@@ -24,7 +24,7 @@ defmodule IdolJpopFancoverMx.Router do
   #   pipe_through :api
   # end
   
-  scope "/auth", IdolJpopFancoverMx do
+  scope "/auth", IdolJpopFancoverMxWeb do
     pipe_through :browser
     
     get "/:provider", AuthController, :request

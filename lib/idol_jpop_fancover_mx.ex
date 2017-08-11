@@ -11,7 +11,7 @@ defmodule IdolJpopFancoverMx do
       # Start the Ecto repository
       supervisor(IdolJpopFancoverMx.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(IdolJpopFancoverMx.Endpoint, []),
+      supervisor(IdolJpopFancoverMxWeb.Endpoint, []),
       # Start your own worker by calling: IdolJpopFancoverMx.Worker.start_link(arg1, arg2, arg3)
       # worker(IdolJpopFancoverMx.Worker, [arg1, arg2, arg3]),
     ]
@@ -25,7 +25,7 @@ defmodule IdolJpopFancoverMx do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    IdolJpopFancoverMx.Endpoint.config_change(changed, removed)
+    IdolJpopFancoverMxWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

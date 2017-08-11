@@ -1,5 +1,5 @@
-defmodule IdolJpopFancoverMx.ErrorView do
-  use IdolJpopFancoverMx.Web, :view
+defmodule IdolJpopFancoverMxWeb.ErrorView do
+  use IdolJpopFancoverMxWeb, :view
 
   def render("404.html", _assigns) do
     "Page not found"
