@@ -1,31 +1,39 @@
-%!PS-Adobe-3.0 EPSF-3.0
-%%Creator: potrace 1.13, written by Peter Selinger 2001-2015
-%%LanguageLevel: 2
-%%BoundingBox: 0 0 960 540
-%%HiResBoundingBox: 0 0 960.000000 540.000000
-%%Pages: 1
-%%EndComments
-%%Page: 1 1
-currentfile /ASCII85Decode filter /LZWDecode filter cvx exec
-J/lc\@jia36p6os-K?5!aCR.L@HM5X8G7'_Rgk/$,T)ho0q6GnR,f*WHT4QlU@Ws&Afqrs$
-:4h$OrH%kbbgS4!L3(`1eQ&KZQ[iV+;tM3o.t+1fh)fNBp@jbL5ABuL^n&r&:iPI1X[d01S
-B860V)?A'!l<?@S77O%&^Z/!;^Cc#RV3NEU:PO3R;@#M5C8<D3^M"@bK#+]dl+7bB0//8@f
-ouSW=?GKWNIG)i-*M$Pncq%^T:1!tg80>\#[^[5S,F`,RiEdUm)'!9V6VQfVh2!Oi"^FZD_
-tLA>-$.69@Rbe1QK9<"`#a$o//G)K+5W9[0^m>S-jHd/-M)BID+V54`#`VuqKLP9['qWD$'
-/X,2$/cg;W3Mg1%p8#C^Ld8VfM9sP5MSn3`]Srgl`pUP!EmFqLOE+A`%rg#6Su#pnp9V-PP
-N\qt$S+QMVJh\'&2Rg0hW544dT/3C.lc%DM(6)sikZc<e>P.%=S.[aK6ZN6NWTRNTY!Q&p=
-@@GT[#P+02V<FN@<4U4-++"ZRs@o"MQZc.,$^!"jLF`3OQ2HjZ4nZ(rEfa6'uI-2^,tGij"
-^jAKj+.8/*&C/7dn12WGVg(5?OO./#JSOCLp^D[S9kcf"t0ejH/K'H/pHBPu]3c1#2KeC5F
-@(5E5fCtj\]%87bClsOee[>hk7&6-KBL)/Fb4V$?R6(2k(eKN(T9%3F/;Apk?UPh]D5m%rB
-^PU2]@p@P-DOAj<Qt9F.N=0L"V=c\o),[)pEh%km_cdp9pQIoZL-`FT)lYaRA/s0/V9\bDU
-9tckKqYhWE%3$E@7c2rm=MYqiN=fQ"uq-EM?YqbM0RHWU18^PXf[.e=Ho?eDdQ+*1RVfsHW
-h=m<1Vc^##lMcS_;q$l#0X\6I1#@3=XYc"qC'?Ian2J=rSd]j6R\]3@`?HB!`K%3rrM3Pu$
-[[N_C>?FjLg@_#_f2(pl+8RM[UJ)InY1/hL/2dTIJuR>.jsiL&\MG3GmomAkY6@at,H"^mY
-iki1ru9,XM[P`TaPLCnu^VD4@Yc)gK%p*?J41g4q>#3jDJC?>P1EoMgg:B+5s['b\>o[fAc
-=uY,g,T>2n/OsD%23*k\?5T8lLs[2?OrS$I]6`5ip92)N-5jR7R-0J&&Y\><B?ttHRUB]hj
-u"/$oD)OM=16TTC3.&TfER_]Q,#C[O#9`mQdG-W8X'D`g!hYIele<k$3q(fE\kR?ar@%V=6
-B/S1%9!S=5ik(m>:VOZBY-N,+DXD[?*=Gppq@7Cb3mJ#_Q&Z]n$8r;lYh/W4)u'O':3oY6k
-Gu'c;1'dD^?*X;mZF@T"CK1'S'u'cn$9%9fDV#-PXiRb4'3M2JQ@Y#lSl2r4fZZLV!'H'g@
-!KY3_QX_,O%!\6TDf-%ZT#)/VL8!XSnM1e<3OoaMm2."_^!nr&P]UXTk.eofZ]d>4_^n?LA
-%$os>L^P[`Z'R$)c0N?)D"nsJM&HdCdhe$:Qn\T6j;C=QbE_!6J:I~>
-%%EOF
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="960.000000pt" height="540.000000pt" viewBox="0 0 960.000000 540.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.13, written by Peter Selinger 2001-2015
+</metadata>
+<g transform="translate(0.000000,540.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M3655 4800 c-3 -5 15 -32 41 -60 44 -47 46 -51 30 -68 -9 -10 -13
+-22 -9 -25 3 -4 2 -7 -4 -7 -12 0 -23 -55 -13 -69 3 -6 37 -26 74 -46 71 -37
+104 -72 146 -156 35 -69 79 -119 310 -350 133 -133 225 -233 240 -262 24 -46
+24 -46 5 -67 -15 -17 -21 -40 -24 -100 -3 -72 -1 -81 21 -103 13 -13 30 -26
+36 -28 23 -8 16 -455 -7 -483 -5 -6 -11 -72 -13 -146 l-3 -135 -46 -76 c-108
+-175 -212 -415 -186 -431 41 -25 41 -23 23 -80 -10 -29 -42 -105 -71 -168 -60
+-130 -67 -152 -90 -270 -9 -47 -23 -103 -30 -125 -7 -22 -18 -74 -24 -115 -6
+-41 -22 -97 -36 -125 -45 -91 -77 -186 -71 -211 9 -36 44 -53 123 -60 62 -6
+73 -4 90 13 19 19 20 31 17 146 l-4 126 40 83 c22 45 40 91 40 102 0 12 9 35
+21 51 39 58 67 121 89 201 15 58 37 106 74 163 29 44 61 98 71 120 17 38 20
+40 74 46 129 13 249 44 350 90 56 26 120 49 140 52 l38 5 37 -88 c20 -49 55
+-116 76 -150 21 -34 53 -104 70 -155 18 -54 51 -124 77 -163 24 -37 46 -82 49
+-98 2 -16 24 -68 49 -115 42 -79 45 -89 34 -120 -12 -37 -5 -86 18 -122 11
+-17 14 -37 9 -68 -3 -25 -1 -53 4 -63 20 -37 128 -52 179 -25 48 24 53 65 20
+147 -11 29 -29 75 -39 102 -11 27 -26 56 -34 65 -8 9 -23 57 -34 106 -49 225
+-102 390 -166 520 -54 110 -96 234 -96 284 0 6 14 11 30 11 17 0 30 2 30 5 0
+27 -160 501 -191 565 -46 96 -126 209 -149 210 -13 0 -16 18 -18 101 -1 55 1
+105 4 111 4 5 17 -9 31 -31 39 -65 102 -88 162 -57 54 28 61 93 25 258 -8 37
+-14 89 -14 116 0 27 -11 80 -24 118 -22 62 -30 73 -83 113 -32 23 -87 56 -123
+73 l-65 29 25 19 c14 11 28 20 32 20 3 0 19 33 34 73 34 86 39 210 11 263 -24
+46 -85 116 -120 137 -47 29 -139 20 -197 -19 -53 -35 -106 -110 -116 -162 -16
+-81 24 -238 74 -295 14 -16 14 -19 2 -27 -25 -16 -48 -11 -82 19 -18 15 -52
+40 -74 54 -23 14 -52 40 -64 57 -12 18 -64 65 -114 105 -146 119 -166 136
+-257 212 -47 39 -120 105 -162 146 -66 65 -76 80 -82 120 -4 27 -2 67 5 97 7
+28 10 53 7 56 -9 9 -46 -38 -52 -67 -10 -46 -43 -37 -118 31 -69 64 -72 66
+-82 50z"/>
+</g>
+</svg>
