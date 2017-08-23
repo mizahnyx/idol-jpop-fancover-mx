@@ -1,1 +1,14 @@
 /* This file is for your main application css. */
+
+/* Logotipos en la nav-bar https://codepen.io/bootstrapped/pen/KwYGwq */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand>img {
+  padding: 7px 14px;
+}
+
+div#main {
+  margin-top: 60px;
+}
