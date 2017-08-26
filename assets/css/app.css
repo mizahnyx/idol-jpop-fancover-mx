@@ -6,9 +6,9 @@
   align-items: center;
 }
 .navbar-brand>img {
-  padding: 7px 14px;
+  margin: 7px;
 }
 
-div#main {
+#main {
   margin-top: 60px;
 }
