@@ -12,12 +12,19 @@ defmodule IdolJpopFancoverMxWeb.Router do
   pipeline :api do
     plug :accepts, ["json"]
   end
+  
+  pipeline :browser_auth do
+    plug Guardian.Plug.VerifySession
+    plug Guardian.Plug.LoadResource
+  end
 
   scope "/", IdolJpopFancoverMxWeb do
-    pipe_through :browser # Use the default browser stack
+    pipe_through [:browser, :browser_auth] # Use the default browser stack
 
     get "/", PageController, :index
-  end
+    delete "/logout", AuthController, :logout
+    get "/credentials", AuthController, :credentials
+    get "/signup", SignupController, :new  end
   
   # Other scopes may use custom stacks.
   # scope "/api", IdolJpopFancoverMx do
@@ -25,9 +32,10 @@ defmodule IdolJpopFancoverMxWeb.Router do
   # end
   
   scope "/auth", IdolJpopFancoverMxWeb do
-    pipe_through :browser
+    pipe_through [:browser, :browser_auth]
     
-    get "/:provider", AuthController, :request
-    get "/:provider/callback", AuthController, :callback
+    get "/:identity", AuthController, :login
+    get "/:identity/callback", AuthController, :callback
+    post "/:identity/callback", AuthController, :callback
   end
 end

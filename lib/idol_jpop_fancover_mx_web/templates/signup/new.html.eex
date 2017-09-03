@@ -1,0 +1,28 @@
+<h3>
+  Register
+</h3>
+<hr></hr>
+                
+<%= form_tag auth_path(@conn, :callback, "identity"), [method: "POST", novalidate: true] do %>
+    <label>
+      Email address
+      <input type="email" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
+    </label>
+
+    <label>
+      Name
+      <input type="text" name="name" >
+    </label>
+
+    <label>
+      Password             
+      <input type="password" name="password">
+    </label>
+
+    <label>
+      Confirm Password             
+      <input type="password" name="password_confirmation">
+    </label>
+
+    <button>Sign up</button>           
+<% end %>

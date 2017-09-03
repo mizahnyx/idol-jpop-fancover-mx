@@ -29,7 +29,11 @@ defmodule IdolJpopFancoverMxWeb do
   def controller do
     quote do
       use Phoenix.Controller, namespace: IdolJpopFancoverMxWeb
-
+      
+      use Guardian.Phoenix.Controller
+      alias Guardian.Plug.EnsureAuthenticated
+      alias Guardian.Plug.EnsurePermissions
+      
       alias IdolJpopFancoverMx.Repo
       import Ecto
       import Ecto.Query
@@ -45,7 +49,7 @@ defmodule IdolJpopFancoverMxWeb do
         namespace: IdolJpopFancoverMxWeb
 
       # Import convenience functions from controllers
-      import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
+      import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 1, get_flash: 2, view_module: 1]
 
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
@@ -53,6 +57,7 @@ defmodule IdolJpopFancoverMxWeb do
       import IdolJpopFancoverMxWeb.Router.Helpers
       import IdolJpopFancoverMxWeb.ErrorHelpers
       import IdolJpopFancoverMxWeb.Gettext
+      import IdolJpopFancoverMxWeb.ViewHelpers
     end
   end
 

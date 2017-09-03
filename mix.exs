@@ -19,7 +19,8 @@ defmodule IdolJpopFancoverMx.Mixfile do
   def application do
     [mod: {IdolJpopFancoverMx.Application, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :ueberauth, :ueberauth_facebook]]
+                    :phoenix_ecto, :postgrex, 
+                    :oauth2, :ueberauth, :ueberauth_facebook, :ueberauth_identity, :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -38,8 +39,14 @@ defmodule IdolJpopFancoverMx.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
+     {:comeonin, "~> 4.0"},
+     {:bcrypt_elixir, "~> 1.0"},
+     {:argon2_elixir, "~> 1.2"},
      {:ueberauth, "~> 0.4"},
-     {:ueberauth_facebook, "~> 0.6"}]
+     {:ueberauth_identity, "~> 0.2"},
+     {:ueberauth_facebook, "~> 0.6"},
+     {:guardian_db, "~> 0.8.0"},
+     {:guardian, "~> 0.14"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

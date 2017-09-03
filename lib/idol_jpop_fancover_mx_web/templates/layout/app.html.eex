@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <%= if Guardian.Plug.current_token(@conn) do %>
+      <meta name="guardian_token" content="<%= Guardian.Plug.current_token(@conn) %>" username="<%= @current_user.nombre %>">
+    <% end %>
 
     <title>Hello IdolJpopFancoverMx!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -26,14 +29,21 @@
             </button>
             <a class="navbar-brand" href="#">
               <img src="<%= static_path(@conn, "/images/idolGirl.svg") %>" alt="Logo">
-              Idol J-Pop Fan Cover MX
+              Cultura Idol J-Pop MX
             </a>
           </div>
           <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">Inicio</a></li>
-              <li><a href="#about">Acerca de</a></li>
-              <li><a href="#contact">Contacto</a></li>
+              <%= if @current_user do %>
+                <li class="active"><a href="#"><%= @current_user.nombre %></a></li>
+                <li><%= link "Salir", to: auth_path(@conn, :logout), method: :delete %></li>  
+              <% else %>
+                <%= if @conn.request_path != auth_path(@conn, :login, "identity") do %>
+                  <li>
+                    <%= link "Entrar", to: auth_path(@conn, :login, "identity") %>
+                  </li>
+                <% end %>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -41,8 +51,8 @@
     </header>
 
     <div id="main" class="container">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <div class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></div>
+      <div class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></div>
 
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
