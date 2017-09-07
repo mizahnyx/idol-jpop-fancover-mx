@@ -4,6 +4,7 @@ defmodule IdolJpopFancoverMxWeb.Usuario do
   schema "usuarios" do
     field :nombre, :string
     field :email, :string
+    field :avatar, :string
 
     has_many :autorizaciones, IdolJpopFancoverMxWeb.Autorizacion
 
@@ -11,11 +12,11 @@ defmodule IdolJpopFancoverMxWeb.Usuario do
   end
 
   @required_fields ~w(nombre email)
-  @optional_fields ~w()
+  @optional_fields ~w(avatar)
 
   def registration_changeset(model, params \\ :empty) do
     model
-    |> cast(params, ~w(email nombre), ~w())
+    |> cast(params, ~w(email nombre), ~w(avatar))
   end
 
   @doc """

@@ -98,19 +98,35 @@ defmodule IdolJpopFancoverMxWeb.UserFromAuth do
   end
 
   defp create_user_from_auth(auth, current_user, repo) do
-    user = current_user
-    if !user, do: user = repo.get_by(Usuario, email: auth.info.email)
-    if !user do 
-      user = create_user(auth, repo)
+    user = if current_user do
+      current_user
+    else
+      repo_user = repo.get_by(Usuario, email: auth.info.email)
+      if repo_user do
+        # Actualización del avatar
+        if repo_user.avatar != auth.info.image do
+          result = Usuario.changeset(%Usuario{}, scrub(%{avatar: auth.info.image}))
+          |> repo.update
+          case result do
+            {:ok, updated_user} -> updated_user
+            {:error, reason} -> 
+              repo.rollback(reason)
+              repo_user
+          end
+        else
+          repo_user
+        end
+      else
+        create_user(auth, repo)
+      end
     end
-    authorization_from_auth(user, auth, repo)
 
     {:ok, user}
   end
 
   defp create_user(auth, repo) do
     name = name_from_auth(auth)
-    result = Usuario.registration_changeset(%Usuario{}, scrub(%{email: auth.info.email, nombre: name}))
+    result = Usuario.registration_changeset(%Usuario{}, scrub(%{email: auth.info.email, nombre: name, avatar: auth.info.image}))
     |> repo.insert
     case result do
       {:ok, user} -> user
