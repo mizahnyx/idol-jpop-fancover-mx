@@ -14,7 +14,11 @@ use Mix.Config
 config :idol_jpop_fancover_mx, IdolJpopFancoverMxWeb.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  # Para Distillery
+  server: true,
+  root: ".",
+  version: Application.spec(:myapp, :vsn)
 
 # Do not print debug messages in production
 config :logger, level: :info

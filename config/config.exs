@@ -27,7 +27,6 @@ config :guardian, Guardian,
   ttl: {30, :days},
   verify_issuer: true,
   serializer: IdolJpopFancoverMxWeb.GuardianSerializer,
-  secret_key: to_string(Mix.env),
   hooks: GuardianDb,
   permissions: %{
     default: [
@@ -40,7 +39,14 @@ config :guardian, Guardian,
 
 config :guardian_db, GuardianDb,
        repo: IdolJpopFancoverMx.Repo
-  
+
+# Ueberauth  
+config :ueberauth, Ueberauth,
+  providers: [
+    facebook: {Ueberauth.Strategy.Facebook, []},
+    identity: {Ueberauth.Strategy.Identity, [callback_methods: ["POST"]]}
+  ]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

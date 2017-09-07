@@ -18,9 +18,15 @@ defmodule IdolJpopFancoverMx.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {IdolJpopFancoverMx.Application, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html,
+                    :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex, 
-                    :oauth2, :ueberauth, :ueberauth_facebook, :ueberauth_identity, :comeonin]]
+                    :oauth2, :ueberauth, :ueberauth_facebook,
+                    :ueberauth_identity, :comeonin,
+                    :guardian, :guardian_db]#,
+  #   included_applications: [:argon2_elixir, :bcrypt_elixir,
+  #                           :elixir_make]
+    ]
   end
 
   # Specifies which paths to compile per environment.
@@ -46,7 +52,8 @@ defmodule IdolJpopFancoverMx.Mixfile do
      {:ueberauth_identity, "~> 0.2"},
      {:ueberauth_facebook, "~> 0.6"},
      {:guardian_db, "~> 0.8.0"},
-     {:guardian, "~> 0.14"}]
+     {:guardian, "~> 0.14"},
+     {:distillery, "~> 1.5.1", runtime: false}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
